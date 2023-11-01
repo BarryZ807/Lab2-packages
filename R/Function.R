@@ -18,6 +18,7 @@
 #' @importFrom dplyr .data
 #'
 #' @examples
+#' boxplot_byDRG(DRG,DRG$`Average Medicare Payments`, "Average Medicare Payments")
 boxplot_byDRG <- function(data,payment_type,x_name){
   data <- data %>%
     mutate(DRG = substr(`DRG Definition`, start=1, stop=3))
@@ -41,8 +42,7 @@ boxplot_byDRG <- function(data,payment_type,x_name){
 #' @export
 #'
 #' @examples
-#' df <- read.csv("DRG_data.csv")
-#' stats_average_payment(df, 'mean')
+#' stats_average_payment(DRG, 'mean')
 stats_average_payment <- function(data, option) {
   ## Stop if option is not equal to either mean, median, or standard deviation
   if (!option %in%  c("mean", "median", "standard deviation")) {
@@ -52,19 +52,19 @@ stats_average_payment <- function(data, option) {
   ## Return the statistic of the input
   if (option == 'mean') {
     ## When option == 'mean'
-    mean = mean(data$Average.Medicare.Payments)
+    mean = mean(data$`Average Medicare Payments`)
     return(round(mean, 2))
   }
 
   if (option == 'median') {
     ## When option == 'median'
-    median = median(data$Average.Medicare.Payments)
+    median = median(data$`Average Medicare Payments`)
     return(round(median, 2))
   }
 
   if (option == 'standard deviation') {
     ## When option == 'standard deviation'
-    sd = sd(data$Average.Medicare.Payments)
+    sd = sd(data$`Average Medicare Payments`)
     return(round(sd, 2))
   }
 }

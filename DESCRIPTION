@@ -1,14 +1,15 @@
-Package: lab2drg
+Package: Lab2
 Type: Package
 Title: This package is for DRG dataset for boxploting and statistics calculating.
 Version: 0.1.0
 Author: Zehui Zhang, Binghan Shen, Amanda Carrico
 Maintainer: Zehui Zhang <zez4005@med.cornell.edu>, 
-    Binghan Shen <bis4006@med.cornell.edu>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+    Binghan Shen <bis4006@med.cornell.edu>,
+    Amanda Carrico <agc4006@med.cornell.edu>
+Description: MThis package is for DRG dataset for boxploting and statistics calculating.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Depends: ggplot2, rlang, tidyverse, readr
 RoxygenNote: 7.2.3
+
